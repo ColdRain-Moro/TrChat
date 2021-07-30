@@ -5,7 +5,6 @@ import io.izzel.taboolib.module.locale.TLocale;
 import io.izzel.taboolib.module.tellraw.TellrawJson;
 import io.izzel.taboolib.util.Strings;
 import me.arasple.mc.trchat.TrChatFiles;
-import me.arasple.mc.trchat.bstats.Metrics;
 import me.arasple.mc.trchat.channels.ChannelGlobal;
 import me.arasple.mc.trchat.channels.ChannelStaff;
 import me.arasple.mc.trchat.chat.ChatFormats;
@@ -61,7 +60,6 @@ public class ListenerChatEvent implements Listener {
             }
             message.send(Bukkit.getConsoleSender());
             ChatLogs.log(player, e.getMessage());
-            Metrics.increase(0);
         }
     }
 

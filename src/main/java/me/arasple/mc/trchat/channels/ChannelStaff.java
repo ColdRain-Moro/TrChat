@@ -3,7 +3,6 @@ package me.arasple.mc.trchat.channels;
 import com.google.common.collect.Lists;
 import io.izzel.taboolib.module.tellraw.TellrawJson;
 import io.izzel.taboolib.util.chat.ComponentSerializer;
-import me.arasple.mc.trchat.bstats.Metrics;
 import me.arasple.mc.trchat.chat.ChatFormats;
 import me.arasple.mc.trchat.chat.obj.ChatType;
 import me.arasple.mc.trchat.utils.Bungees;
@@ -30,7 +29,6 @@ public class ChannelStaff {
             } else {
                 Bukkit.getOnlinePlayers().stream().filter(p -> p.hasPermission("trchat.staff")).forEach(format::send);
             }
-            Metrics.increase(0);
         }
     }
 

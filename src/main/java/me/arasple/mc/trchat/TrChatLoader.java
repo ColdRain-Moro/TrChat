@@ -5,7 +5,6 @@ import io.izzel.taboolib.util.Files;
 import me.arasple.mc.trchat.chat.ChatFormats;
 import me.arasple.mc.trchat.filter.ChatFilter;
 import me.arasple.mc.trchat.func.ChatFunctions;
-import me.arasple.mc.trchat.updater.Updater;
 import me.arasple.mc.trchat.utils.Bungees;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
@@ -36,8 +35,6 @@ public class TrChatLoader {
         if (hookPlaceholderAPI()) {
             return;
         }
-        // Updater
-        Updater.init(TrChat.getPlugin());
         // Chat Filter
         ChatFilter.loadFilter(true, Bukkit.getConsoleSender());
         // Chat Formats

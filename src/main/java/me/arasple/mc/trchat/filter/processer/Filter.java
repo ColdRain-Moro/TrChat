@@ -1,7 +1,5 @@
 package me.arasple.mc.trchat.filter.processer;
 
-import me.arasple.mc.trchat.bstats.Metrics;
-
 import java.util.*;
 
 /**
@@ -127,7 +125,6 @@ public class Filter {
                 i = i + markNum;
             }
         }
-        Metrics.increase(1, count);
         return new FilteredObject(new String(chs), count);
     }
 
