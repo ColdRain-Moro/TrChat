@@ -7,10 +7,11 @@
 #  |____|   |__|   \______  |___|  (____  |__|
 #  \/     \/     \/  TrChat Function
 #
+#  匹配聊天文本 转换为 JSON 模块
 #
 ######################################################################
 
-# General (Plugin's internal functions)
+# 常规 (插件内置的高级聊天功能)
 GENERAL:
   # Command Controller
   COMMAND-CONTROLLER:
@@ -32,11 +33,16 @@ GENERAL:
       - 'ver(sion)?(s)?'
       - 'help(s)?'
       - 'arasple<exact>'
-  # Display item in chat
+
+  # 物品展示功能
   ITEM-SHOW:
+    # 是否启用
     ENABLE: true
+    # 冷却
     COOLDOWNS: 30
+    # 格式
     FORMAT: '&8[&3{0} &bx{1}&8]'
+    # 替换的字符串
     KEYS:
       - '%i'
       - '%item'
@@ -44,18 +50,23 @@ GENERAL:
       - '%item%'
       - '[i]'
       - '[item]'
-  # Mention (@At) someone in chat
+
+  # At玩家功能
   MENTION:
+    # 是否启用
     ENABLE: true
     SELF-MENTION: false
+    # 显示格式
     FORMAT: '&r &a@&2{0}&r '
+    # At冷却
     COOLDOWNS: 30
+    # 是否提示被At玩家 (语言文件中改)
     NOTIFY: true
 
-# Custom Functions
-# Match chat text, format into JSON
+# 自定义的模块
+# 你可以按照示例创建类似的功能
+# 谨防正则表达式冲突
 CUSTOM:
-
   # 示例 —— QQ 分享
   shareQQ:
     # 满足条件表达式才能使用这个功能
