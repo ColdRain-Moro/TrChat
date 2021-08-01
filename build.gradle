@@ -7,7 +7,7 @@ plugins {
 
 configurations {
     group = 'me.arasple.mc.trchat'
-    version = '1.71'
+    version = '1.73'
 
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
@@ -34,11 +34,10 @@ repositories {
 }
 
 dependencies {
-    compile 'org.spigotmc:spigot:1.15.2-R0.1-SNAPSHOT'
-    compile 'org.bstats:bstats-bukkit:1.7'
+    compile 'ink.ptms.core:v11605:11605'
     compile 'io.izzel.taboolib:TabooLib:5.17:all'
     compile 'io.izzel.taboolib.loader:TabooLibloader:1.4:all'
-    compile 'me.clip:placeholderapi:2.10.4'
+    compile 'me.clip:placeholderapi:2.10.9'
     shadow fileTree(dir: 'libs', includes: ['*.jar'])
 }
 

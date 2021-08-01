@@ -3,14 +3,17 @@ package me.arasple.mc.trchat.channels;
 import com.google.common.collect.Lists;
 import io.izzel.taboolib.module.tellraw.TellrawJson;
 import io.izzel.taboolib.util.chat.ComponentSerializer;
+import me.arasple.mc.trchat.TrChatFiles;
 import me.arasple.mc.trchat.chat.ChatFormats;
 import me.arasple.mc.trchat.chat.obj.ChatType;
 import me.arasple.mc.trchat.utils.Bungees;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 /**
  * @author Arasple
@@ -25,7 +28,7 @@ public class ChannelStaff {
             TellrawJson format = ChatFormats.getFormat(ChatType.STAFF, player).apply(player, message);
             if (Bungees.isEnable()) {
                 String raw = ComponentSerializer.toString(format.getComponentsAll());
-                Bungees.sendBungeeData(player, "TrChat", "SendRawPerm", raw, "trchat.staff");
+                Bungees.sendBungeeData(player,"TrChat", "SendRawPerm", raw, "trchat.staff");
             } else {
                 Bukkit.getOnlinePlayers().stream().filter(p -> p.hasPermission("trchat.staff")).forEach(format::send);
             }

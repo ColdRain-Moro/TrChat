@@ -3,3 +3,9 @@ FORCE-GLOBAL: false
 
 # Messages starting with this will be forwarded to Bungee servers
 FORCE-GLOBAL-PREFIX: '!all'
+
+# Asgard Edition 新增
+# 格式: 服务器端口号;服务器端口号;服务器端口号...
+# 端口号被放在同一栏的服务器可以相互跨服聊天
+CHANNELS:
+  - 608;609

@@ -2,10 +2,10 @@ package me.arasple.mc.trchat.nms;
 
 import io.izzel.taboolib.module.lite.SimpleReflection;
 import me.arasple.mc.trchat.filter.ChatFilter;
-import net.minecraft.server.v1_15_R1.*;
+import net.minecraft.server.v1_16_R3.*;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.craftbukkit.v1_15_R1.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_16_R3.inventory.CraftItemStack;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -40,7 +40,7 @@ public class InternalPacketUtils extends AbstractPacketUtils {
 
     @Override
     public void filterItem(Object item) {
-        ItemStack itemStack = CraftItemStack.asCraftMirror((net.minecraft.server.v1_15_R1.ItemStack) item);
+        ItemStack itemStack = CraftItemStack.asCraftMirror((net.minecraft.server.v1_16_R3.ItemStack) item);
         if (itemStack == null || itemStack.getType() == Material.AIR) {
             return;
 

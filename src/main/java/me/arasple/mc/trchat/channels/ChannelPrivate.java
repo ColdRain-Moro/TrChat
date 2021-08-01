@@ -7,6 +7,7 @@ import io.izzel.taboolib.module.locale.TLocale;
 import io.izzel.taboolib.module.tellraw.TellrawJson;
 import io.izzel.taboolib.util.chat.ComponentSerializer;
 import me.arasple.mc.trchat.TrChat;
+import me.arasple.mc.trchat.TrChatFiles;
 import me.arasple.mc.trchat.chat.ChatFormats;
 import me.arasple.mc.trchat.chat.obj.ChatType;
 import me.arasple.mc.trchat.cmds.CommandReply;
@@ -15,8 +16,10 @@ import me.arasple.mc.trchat.utils.Bungees;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 /**
  * @author Arasple

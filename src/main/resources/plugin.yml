@@ -11,4 +11,6 @@ built-time: ${built}
 softdepend:
   - PlaceholderAPI
 
-author: Arasple
+authors:
+  - Arasple
+  - 寒雨
